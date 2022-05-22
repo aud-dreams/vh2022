@@ -14,7 +14,7 @@ const CourseSelectionComponent = ({ courses, setCourses}) => {
 
     useEffect(() => {
         setCourses([course1, course2, course3]);
-        console.log(course1, course2, course3);
+        // (course1, course2, course3);console.log
     }
     ,[course1, course2, course3, setCourses]);
 
@@ -28,6 +28,7 @@ const CourseSelectionComponent = ({ courses, setCourses}) => {
                 setCourse={setCourse1}
                 // courseUpdated={courseUpdated}
                 // setCourseUpdated={setCourseUpdated}
+                className={styles['course-1']}
             />
             <CourseInputComponent
                 classNum={2}
@@ -35,6 +36,7 @@ const CourseSelectionComponent = ({ courses, setCourses}) => {
                 setCourse={setCourse2}
                 // courseUpdated={courseUpdated}
                 // setCourseUpdated={setCourseUpdated}
+                className={styles['course-2']}
             />
             <CourseInputComponent
                 classNum={3}
@@ -42,6 +44,7 @@ const CourseSelectionComponent = ({ courses, setCourses}) => {
                 setCourse={setCourse3}
                 // courseUpdated={courseUpdated}
                 // setCourseUpdated={setCourseUpdated}
+                className={styles['course-3']}
             />
         </div>
     );
