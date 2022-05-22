@@ -14,7 +14,7 @@ const LandingPage = () => {
             {/* <FontAwesomeIcon icon={faRocket} className={styles['rocket']}/> */}
             <div className={styles['page-title']}>commutr course</div>
             <div className={styles['peter-planner-desc']}>
-                hi there! welcome to commutr course, the perfect planning tool for Petr the Commutr any any of his friends. just enter your classes and we’ll help you find the best schedule for minimizing days on campus and time between classes.
+                hi there! welcome to commutr course, the perfect planning tool for Petr the Commutr and any of his friends. just enter your classes and we’ll help you find the best schedule for minimizing days on campus and time between classes.
             </div>
             <div className={styles['peter-planner-link-container']}>
                 {/* <JournalBookmark /> */}

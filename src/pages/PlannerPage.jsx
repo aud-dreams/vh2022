@@ -65,7 +65,7 @@ const PlannerPage = () => {
                 <div className={styles['left']}>
                     <div className={styles['description']}>
                     welcome to commutr course, the perfect planning
-                    tool for Petr the Commutr and his friends.
+                    tool for Petr the Commutr and any of his friends.
                     just enter your classes and we'll help you
                     find the best schedule for minimizing days
                     on campus and time between classes!
