@@ -2,3 +2,27 @@
     width: 100%;
     margin: 0 1em 0 1em;
 }
+
+.course-1 {
+    animation-name: course-1;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+};
+
+/* .course-2 {
+
+};
+
+.course-3 {
+
+};
+
+
+@keyframes course-1 {
+    0% {margin: 1em 1em 1em 1em;}
+    20% {margin: 1.75em 1em 1em 1em;}
+    50% {margin: 1em 1em 1em 1em;}
+    75% {margin: 0.25em 1em 1em 1em;}
+    100% {margin: 1em 1em 1em 1em;}
+}; */

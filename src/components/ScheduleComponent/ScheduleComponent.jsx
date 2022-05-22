@@ -6,7 +6,8 @@ import CourseInfoComponent from '../CourseInfoComponent/CourseInfoComponent';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-const ScheduleComponent = ({scheduleNum, daysOnCampus, avgTime}) => {
+const ScheduleComponent = ({scheduleNum, scheduleData, daysOnCampus, avgTime}) => {
+    console.log("S", scheduleData)
     return (
         <div className={styles['schedule-component-container']}>
             <div className={styles['schedule-info-header']}>

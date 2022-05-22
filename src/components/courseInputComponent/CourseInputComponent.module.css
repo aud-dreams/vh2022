@@ -26,16 +26,16 @@
 }
 
 .input-text-field {
-    padding: 0.35em;
-    border-radius: 0.25em;
+    padding: 0.35em 0.35em 0.35em 0.75em;
+    border-radius: 0.35em;
     border: none;
     margin: 0.25em;
     font-size: 0.85em;
 }
 
 .input-text-field:focus {
-    padding: 0.35em;
-    border-radius: 0.25em;
+    padding: 0.35em 0.35em 0.35em 0.75em;
+    border-radius: 0.35em;
     /* border: solid 1px red; */
     border: none;
     margin: 0.25em;
