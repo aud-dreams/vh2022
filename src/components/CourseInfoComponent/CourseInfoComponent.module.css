@@ -3,9 +3,22 @@
     /* display: flex;
     flex-direction: row; */
     border-radius: 1em;
-    margin: 1.5em 1em 0 1em;
-    padding: 1em;
+    margin: 1.5em 0em 0 1em;
+    padding: 1em 0em 1em 1em;
     /* width: 100%; */
+    /* border: 10px solid red; */
+
+}
+
+.course-info-component-container-changing {
+    background-color: #D8CDB9;
+    /* display: flex;
+    flex-direction: row; */
+    border-radius: 1em;
+    margin: 1.5em 0em 0 1em;
+    padding: 1em 0em 1em 1em;
+    /* width: 100%; */
+    box-shadow: 0em 0em 0.25em 0.25em #C4B496;
 
 }
 

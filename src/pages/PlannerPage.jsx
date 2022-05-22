@@ -17,6 +17,8 @@ const PlannerPage = () => {
     const [courses, setCourses] = useState([]);
     const [schedules, setSchedules] = useState([]);
     const [courseData, setCourseData] = useState([]);
+    const [topSchedules, setTopSchedules] = useState();
+    const [topSchedCodes, setTopSchedCodes] = useState();
 
     // Helper functions for API call
     // schedules = makeSchedule(courses)
@@ -31,6 +33,7 @@ const PlannerPage = () => {
         });
     
         url = url + '?' + params.toString();
+        url = url.replace("&", "%26")
         url = url.replace("+", "%20");
         console.log(url);
     
@@ -42,6 +45,13 @@ const PlannerPage = () => {
         //         setCourseData([...courseData, result.data]);
         //         setSchedules(makeSchedule(courseData));
         //     })
+    };
+
+    const convertToCourseCodes = (scheduleList) => {
+        return scheduleList.map(scheduleArray => {
+            return scheduleArray[0].map(section => {
+                return section.sectionCode;
+            })});
     };
     
 
@@ -83,11 +93,21 @@ const PlannerPage = () => {
 
                             Promise.all(loadedCourseData).then((values) => {
                                 console.log('values', values);
-                                const sched = makeSchedule(values)
-                                console.log('made schedule', sched)
-                                setSchedules(sched)
+                                const sched = makeSchedule(values);
+                                console.log('made schedule', sched);
+                                setSchedules(sched);
+                                setTopSchedules(sched.slice(0, 3));
+                                console.log('top schedyle', topSchedules);
+                                console.log('top scheds', sched.slice(0, 3));
+                                console.log('codes', convertToCourseCodes(sched.slice(0, 3)));
+                                console.log('TOP SCHED', sched[0]);
+                                // setTopSchedCodes(sched[0]);
+                                setTopSchedCodes(sched.slice(0, 3));
                             });
-                            console.log(schedules);
+                            // console.log('shedules', schedules);
+                            console.log('TOP SCHEDULE', topSchedules);
+                            // console.log('top 3', schedules.slice(0, 3));
+                            // setTopSchedules(schedules[0:3]);
                         }}
                     >
                         get schedule
@@ -96,7 +116,11 @@ const PlannerPage = () => {
                 </div>
 
                 <div className={styles['schedule']}>
-                    <ScheduleComponent scheduleNum={1} scheduleData={schedules}/>
+                    <ScheduleComponent
+                        topCodes={topSchedCodes}
+                        setTopCodes={setTopSchedCodes}
+                        scheduleNum={1}
+                        scheduleData={schedules}/>
                 </div>
             </div>
         </div>
