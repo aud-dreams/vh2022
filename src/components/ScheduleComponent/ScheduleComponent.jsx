@@ -17,12 +17,20 @@ const ScheduleComponent = ({topCodes, setTopCodes, scheduleNum, scheduleData, da
                 {(typeof topCodes === 'object' ) ? (
                     <div className={styles['schedule-num']}><i><b>schedule #{schedNum + 1}</b></i></div>
                 ) : <div className={styles['schedule-num']}><i><b>schedule #???</b></i></div>}
-                <div className={styles['schedule-days-on-campus']}>
-                    days on campus: {daysOnCampus}
-                </div>
-                <div className={styles['schedule-avg-time']}>
-                    average time between classes per day: {avgTime} hrs
-                </div>
+                {(typeof topCodes === 'object' ) ? (
+                    <div className={styles['schedule-days-on-campus']}>
+                        days on campus: {topCodes[schedNum][1]}
+                    </div>
+                ) : <div className={styles['schedule-days-on-campus']}>
+                        days on campus: ???
+                     </div>}
+                {(typeof topCodes === 'object' ) ? (
+                    <div className={styles['schedule-avg-time']}>
+                        average time between classes per day: {topCodes[schedNum][2]} hrs
+                    </div>
+                ) : <div className={styles['schedule-avg-time']}>
+                    average time between classes per day: ??? hrs
+                </div>}
             </div>
 
             <div className={styles['courses-container']}>
