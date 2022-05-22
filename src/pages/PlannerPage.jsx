@@ -33,7 +33,6 @@ const PlannerPage = () => {
         });
     
         url = url + '?' + params.toString();
-        url = url.replace("&", "%26")
         url = url.replace("+", "%20");
         console.log(url);
     
