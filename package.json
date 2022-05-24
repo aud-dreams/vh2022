@@ -1,6 +1,6 @@
 {
   "name": "vh2022",
-  "homepage": "https://aud-dreams.github.io/vh2022",
+  "homepage": "https://aud-dreams.github.io/vh2022/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -46,6 +46,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^4.0.0",
+    "webpack-dev-server": "^4.9.0"
   }
 }
